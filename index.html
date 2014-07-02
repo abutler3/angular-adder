@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+
+<body style="margin-top: 50px;">
+	<div id="container" style="width: 920px; margin: 0 auto; text-align: center; background-color: grey;">
+		<hr>
+		<h1>Adder/Subtractor</h1>
+		X = <input id="x_number" placeholder="Enter an Integer"/><br>
+		Y = <input id="y_number" placeholder="Enter an Integer"/><br>
+		<button type="button" onclick="plus()">+</button><button type="button" onclick="minus()">-</button>
+		<div id="results"></div>
+		<hr>
+	</div>
+	<script>
+			function plus() {
+			var x = parseInt(document.getElementById("x_number").value);
+			var y = parseInt(document.getElementById("y_number").value);
+				if (isNaN(x) || isNaN(y)) 
+				  {
+				    alert("Numbers must be entered in both fields");
+				    return false;
+				  } else {
+				  	var z = x + y;
+					document.getElementById("results").innerHTML = x + ' plus ' + y + ' is ' + z;
+				  }
+			}
+
+			function minus() {
+				var x = parseInt(document.getElementById("x_number").value);
+				var y = parseInt(document.getElementById("y_number").value);
+				if (isNaN(x) || isNaN(y)) 
+				  {
+				    alert("Numbers must be entered in both fields");
+				    return false;
+				  } else {
+					var z = x - y;
+					document.getElementById("results").innerHTML = x + ' minus ' + y + ' is ' + z;
+				}
+			}
+	</script>
+</body>
+</html>
